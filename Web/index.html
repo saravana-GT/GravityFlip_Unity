@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GravityFlip - Challenge the Laws of Physics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta name="description" content="A fast-paced, 3D gravity-flipping arcade experience. Flip your way to the top of the leaderboard!">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>GRAVITY_SYSTEM_STARTING...</p>
+    </div>
+
+    <div id="game-container">
+        <header>
+            <h1 class="glow-text">GRAVITY<span>FLIP</span></h1>
+            <div id="score-container">SCORE: <span id="score">0</span></div>
+        </header>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-overlay">
+            <div id="start-screen" class="glass-card">
+                <h2>READY TO FLIP?</h2>
+                <div class="instruction-box">
+                    <p>TAP or SPACEBAR to</p>
+                    <span class="highlight">INVERT GRAVITY</span>
+                </div>
+                <button id="start-btn" class="primary-btn">INITIATE_GAME</button>
+            </div>
+
+            <div id="game-over-screen" class="glass-card hidden">
+                <h2>CONNECTION_LOST</h2>
+                <div class="stats">
+                    <p>FINAL_SCORE: <span id="final-score">0</span></p>
+                    <p>BEST_FLIP: <span id="high-score">0</span></p>
+                </div>
+                <button id="restart-btn" class="primary-btn">REBOOT_SYSTEM</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
