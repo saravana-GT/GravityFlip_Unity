@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Settings")]
     public float score;
-    public float currentSpeed = 10f;
+    public float currentSpeed = 6f;
     public float maxSpeed = 25f;
     public float speedIncreaseRate = 0.1f;
 

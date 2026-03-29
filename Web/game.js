@@ -1,5 +1,5 @@
 let scene, camera, renderer, player, obstacles = [], isPlaying = false, score = 0, highScore = localStorage.getItem('gravityFlipHighScore') || 0;
-let gameSpeed = 0.5, isUpsideDown = false, targetY = -3, vy = 0, gravity = 0.015;
+let gameSpeed = 0.25, isUpsideDown = false, targetY = -3, vy = 0, gravity = 0.012;
 
 const scoreEl = document.getElementById('score');
 const finalScoreEl = document.getElementById('final-score');
