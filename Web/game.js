@@ -11,9 +11,10 @@ const loadingScreen = document.getElementById('loading-screen');
 function init() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const canvas = document.getElementById('gameCanvas');
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('game-container').appendChild(renderer.domElement);
+    // renderer.domElement is now the existing canvas, so no need to append it again.
 
     // Player (Cube)
     const geometry = new THREE.BoxGeometry(1, 1, 1);
